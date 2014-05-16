@@ -1,0 +1,52 @@
+header {
+  background-color: $dark1;
+  nav {
+
+    overflow: hidden;
+    max-width: 980px;
+    margin: 0 auto;
+    h1 {
+      float: left;
+      margin: 0;
+    }
+    .user_nav {
+      float: left;
+    }
+    .user_info {
+      float: right;
+      li {
+        float: left;
+      }
+    }
+  }
+}
+
+main{
+  .content{
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}
+
+
+/* nav styles maybe to be moved out? */
+
+.user_info {
+  li + li{
+    margin-left:.3em;
+  }
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      padding: .4em .8em;
+      background-color: $bright;
+      color: $light2;
+      border-radius:5px;
+    }
+    a:hover{
+
+    }
+  }
+}
+
