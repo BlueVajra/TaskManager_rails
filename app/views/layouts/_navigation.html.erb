@@ -1,5 +1,5 @@
 <nav>
-  <h1>GYSD</h1>
+  <h1><%= link_to "GYSD", root_path %></h1>
   <ul class="user_nav">
     <% if user_signed_in? %>
       <li><%= link_to 'Projects', root_path %></li>
@@ -8,11 +8,11 @@
 
   <ul class="user_info">
     <% if user_signed_in? %>
-      <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-      <li><%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %></li>
+      <li><%= link_to current_user.email, edit_user_registration_path, class: 'current_user' %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, :method => 'delete', class: 'sign' %></li>
     <% else %>
-      <li><%= link_to 'Sign in', new_user_session_path %></li>
-      <li><%= link_to 'Sign up', new_user_registration_path %></li>
+      <li><%= link_to 'Sign in', new_user_session_path, class: 'sign' %></li>
+      <li><%= link_to 'Sign up', new_user_registration_path, class: 'sign' %></li>
     <% end %>
   </ul>
 </nav>

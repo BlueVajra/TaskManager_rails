@@ -11,7 +11,8 @@
  * file per style scope.
  *
  */
-
-@import 'variables';
 @import 'normalize';
+@import "bourbon";
+@import "bitters/bitters";
+@import 'variables';
 @import 'layout';

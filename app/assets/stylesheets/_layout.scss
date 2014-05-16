@@ -5,6 +5,7 @@ header {
     overflow: hidden;
     max-width: 980px;
     margin: 0 auto;
+    padding:.2em 0;
     h1 {
       float: left;
       margin: 0;
@@ -31,20 +32,35 @@ main{
 
 /* nav styles maybe to be moved out? */
 
+nav h1 a{
+  text-decoration: none;
+  color:$bright
+}
+
 .user_info {
   li + li{
     margin-left:.3em;
   }
   li {
     list-style: none;
-    a {
-      text-decoration: none;
-      padding: .4em .8em;
-      background-color: $bright;
-      color: $light2;
-      border-radius:5px;
+    a.sign {
+      @include button($bright);
     }
-    a:hover{
+    a.current_user{
+      display:block;
+      padding:.4em;
+      margin-top:.1em;
+    }
+  }
+}
+.user_nav {
+  li{
+    margin-left:2em;
+    a{
+      display:block;
+      padding:.4em;
+      margin-top:.1em;
+      font-weight:bold;
 
     }
   }

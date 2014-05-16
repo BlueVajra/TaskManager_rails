@@ -20,4 +20,8 @@ feature "Signup" do
     click_button 'Sign in'
     expect(page).to have_content 'Signed in successfully.'
   end
+
+  scenario "signed in user sees email address in nav bar" do
+    expect(page).to have_content "bob@bob.com"
+  end
 end
